@@ -28,7 +28,7 @@ To install Contact Book, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Connectslide121/contact-book.git
+git clone https://github.com/Connectslide121/contact-book-live-demo.git
 ```
 
 2. Navigate to the project directory:
@@ -45,7 +45,7 @@ npm install
 
 ## Usage
 
-To start the development environment, first make sure you start the backend, then run the following command:
+To start the development server, run the following command:
 
 ```bash
 ng serve
