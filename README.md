@@ -36,7 +36,7 @@ git clone https://github.com/Connectslide121/contact-book-live-demo.git
 2. Navigate to the project directory:
 
 ```bash
-cd contact-book/contact-book-client
+cd contact-book-live-demo
 ```
 
 3. Install the dependencies:
