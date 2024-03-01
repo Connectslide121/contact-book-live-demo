@@ -1,0 +1,23 @@
+<section class="contact-book-wrapper">
+  <h1 class="title">📖 CONTACTS</h1>
+  <app-new-contact-form (contactAdded)="addContact($event)" />
+  <div class="filter">
+    <input
+      id="filter"
+      type="text"
+      placeholder="Filter"
+      (input)="filterContacts()"
+      [formControl]="filter"
+    />
+  </div>
+
+  <ul class="contact-list">
+    @for (contact of filteredContacts(); track contact.id) {
+    <app-contact-card
+      [contact]="contact"
+      (contactEdited)="editContact($event)"
+      (contactDeleted)="deleteContact($event)"
+    ></app-contact-card>
+    }
+  </ul>
+</section>

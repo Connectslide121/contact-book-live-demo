@@ -1,0 +1,116 @@
+li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+li label {
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+}
+
+li.contact {
+  background-color: #222;
+}
+
+.contact-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+}
+
+li.contact .contact-buttons-wrapper button {
+  display: none;
+  background-color: #5b5b5b;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+li.contact button:hover {
+  color: #a8a8a8;
+}
+
+li.contact:hover .contact-buttons-wrapper button {
+  display: block;
+}
+
+li.contact-editing input,
+li.contact-editing textarea {
+  @apply w-full bg-background-300 rounded-lg p-2 outline-none text-white;
+  resize: none;
+}
+
+.editing-buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin: 10px;
+}
+.editing-buttons-wrapper button {
+  padding: 2px 6px;
+  background-color: #5b5b5b;
+  border-radius: 4px;
+}
+
+.editing-buttons-wrapper button:hover {
+  color: #a8a8a8;
+}
+
+.contact-editing input,
+.contact-editing textarea {
+  @apply w-full bg-background-300 rounded-lg p-2 outline-none text-white;
+  resize: none;
+}
+
+.contact-editing form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 700px;
+  margin-inline: auto;
+}
+
+.overlay {
+  position: absolute;
+  background-color: #b1b1b1e6;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.confirm-delete-dialog {
+  position: absolute;
+  color: #222;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.confirm-delete-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-delete-buttons-wrapper button {
+  background-color: white;
+  color: #222;
+  padding: 2px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+}

@@ -1,0 +1,42 @@
+@if(!contact.editing){
+<li class="contact">
+  <label>🙍‍♂️ {{ contact.name }}</label>
+  <label>🏢 {{ contact.company }}</label>
+  <label>📧 {{ contact.email }}</label>
+  <label>☎️ {{ contact.phone }}</label>
+  <label>ℹ️ {{ contact.comment }}</label>
+  <div class="contact-buttons-wrapper">
+    <button (click)="changeEditing(contact, true)">Edit</button>
+    <button (click)="showConfirmDeleteDialog()">Delete</button>
+  </div>
+  @if(showConfirmDelete){
+  <div class="overlay"></div>
+  <div class="confirm-delete-dialog">
+    <p>Are you sure you want to delete this contact?</p>
+    <div class="confirm-delete-buttons-wrapper">
+      <button (click)="deleteContact()">Yes</button>
+      <button (click)="showConfirmDelete = false">No</button>
+    </div>
+  </div>
+  }
+</li>
+} @else {
+<li class="contact-editing">
+  <form [formGroup]="form">
+    <input type="text" placeholder="Name" formControlName="name" />
+    <input type="text" placeholder="Company" formControlName="company" />
+    <input type="email" placeholder="Email" formControlName="email" />
+    <input type="text" placeholder="Phone" formControlName="phone" />
+    <textarea
+      type="text"
+      placeholder="Comment"
+      rows="5"
+      formControlName="comment"
+    ></textarea>
+    <div class="editing-buttons-wrapper">
+      <button (click)="editContact()">Save</button>
+      <button (click)="changeEditing(contact, false)">Cancel</button>
+    </div>
+  </form>
+</li>
+}

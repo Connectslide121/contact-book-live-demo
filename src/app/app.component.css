@@ -1,0 +1,25 @@
+.contact-book-wrapper {
+  @apply bg-background-200 p-8 w-fit mt-8 mx-auto rounded-xl shadow-md;
+}
+
+.title {
+  @apply text-3xl font-bold text-center mb-4;
+}
+
+.filter {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin: 10px;
+}
+
+.filter input {
+  @apply bg-background-300 rounded-lg p-2 outline-none text-white;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 700px;
+}

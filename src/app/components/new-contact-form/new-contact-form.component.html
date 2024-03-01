@@ -1,0 +1,38 @@
+<form [formGroup]="form" (submit)="addContact()" class="new-contact">
+  <input
+    id="name"
+    type="text"
+    placeholder="Name"
+    formControlName="name"
+    autocomplete="name"
+  />
+  <input
+    id="company"
+    type="text"
+    placeholder="Company"
+    formControlName="company"
+    autocomplete="company"
+  />
+  <input
+    id="email"
+    type="email"
+    placeholder="Email"
+    formControlName="email"
+    autocomplete="email"
+  />
+  <input
+    id="phone"
+    type="text"
+    placeholder="Phone"
+    formControlName="phone"
+    autocomplete="phone"
+  />
+  <textarea
+    id="comment"
+    type="text"
+    placeholder="Comment"
+    rows="5"
+    formControlName="comment"
+  ></textarea>
+  <button type="submit">Add contact</button>
+</form>
