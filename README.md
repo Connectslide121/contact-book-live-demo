@@ -4,6 +4,8 @@ Contact Book is a simple web application built with Angular that allows users to
 
 This is just a live demo, there is no back end, data resets on page reload.
 
+Try it [here](https://connectslide121.github.io/contact-book-live-demo/)
+
 Project repository [here](https://github.com/Connectslide121/contact-book)
 
 ## Features
