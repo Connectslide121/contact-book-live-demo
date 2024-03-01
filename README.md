@@ -2,6 +2,10 @@
 
 Contact Book is a simple web application built with Angular that allows users to manage their contacts easily. This project is designed to demonstrate a simple CRUD (Create, Read, Update, Delete) operation using Angular as the front-end framework and CosmosDB with Azure functions for the back-end.
 
+This is just a live demo, there is no back end, data resets on page reload.
+
+Project repository [here](https://github.com/Connectslide121/contact-book)
+
 ## Features
 
 - Add new contact
