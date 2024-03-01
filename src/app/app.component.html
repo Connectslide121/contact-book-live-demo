@@ -2,6 +2,7 @@
   <h1 class="title">📖 CONTACTS</h1>
   <app-new-contact-form (contactAdded)="addContact($event)" />
   <div class="filter">
+    <p>Contacts: {{ count }}</p>
     <input
       id="filter"
       type="text"

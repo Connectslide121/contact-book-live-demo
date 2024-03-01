@@ -20,12 +20,13 @@ import { contacts } from './sampleData';
 })
 export class AppComponent {
   contactList = signal<Contact[]>(contacts);
-
   filteredContacts = signal<Contact[]>(this.contactList());
+  count: number = this.filteredContacts().length;
 
   addContact(newContact: Contact) {
     this.contactList.set([newContact, ...this.contactList()]);
     this.filteredContacts.set(this.contactList());
+    this.count = this.filteredContacts().length;
   }
 
   changeEditing(contact: Contact, editing: boolean) {
@@ -44,6 +45,7 @@ export class AppComponent {
   deleteContact(contact: Contact) {
     this.contactList.set(this.contactList().filter((c) => c.id !== contact.id));
     this.filteredContacts.set(this.contactList());
+    this.count = this.filteredContacts().length;
   }
 
   filter: FormControl = new FormControl('', { nonNullable: true });
@@ -56,6 +58,7 @@ export class AppComponent {
         )
       )
     );
+    this.count = this.filteredContacts().length;
     return this.filteredContacts;
   }
 }
